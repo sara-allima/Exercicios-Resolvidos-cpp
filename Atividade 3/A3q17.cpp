@@ -16,7 +16,7 @@ int main() {
 
     for (int i = a; i <= b; i++)
     {
-        soma+=i;
+        soma+=i; /*mesma coisa que soma = soma + i*/
     }
 
     cout << soma;
