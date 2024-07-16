@@ -1,28 +1,29 @@
+/*09. Faça um algoritmo para ler um vetor de 20 números. Após isto, ler mais um número qualquer,
+calcular e escrever quantas vezes esse número aparece no vetor.*/
 #include <iostream>
 
 using namespace std;
 
-int main(){
-    int vet[20], x, vezes;
+int main() {
+    int vet[20], x, qtd;
 
-    for(int i = 0; i < 20; i++) //for atribuição de valor
+    for (int i = 0; i < sizeof(vet) / 4; i++)
     {
         cout << "Escolha um numero: ";
         cin >> vet[i];
     }
 
-    cout << "Escolha outro numero: ";
+    cout << "Valor X: ";
     cin >> x;
 
     for (int i = 0; i < 20; i++)
     {
-        if (vet[i] == x)
+        if (x == vet[i])
         {
-            vezes+= 1;
+            qtd++;
         }
         
     }
-
-    cout << "O numero " << x << " apareceu " << vezes << " no vetor";
     
+    cout << "O numero " << x << " aparece no vetor " << qtd << " vezes.";
 }
